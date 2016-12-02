@@ -1,5 +1,5 @@
 
-<pre>
+<pre style="font-style:bold; background-color:white;">
                          ####################################################
                          #  _      ___  ___                     __   _____  #
                          # (_)     |  \/  |                    /  | |  _  | #
@@ -20,12 +20,26 @@
 ![preview](img/ipmap_preview.png)
 
 ## Install
-`
-sudo apt-get update
-sudo apt-get install nodejs npm
-cd ipMap 
-npm install
+`git clone git@github.com:totor59/ipMap.git`
+
+`sudo chmod +x ipMap/install.sh`
+
+`sudo ./ipMap/install.sh`
+
+Use `wherami` in a terminal.
 
 ## Sources
 For the world map : [https://github.com/yaronn/blessed-contrib](https://github.com/yaronn/blessed-contrib)
+
 Blessed : [https://github.com/chjj/blessed](https://github.com/chjj/blessed)
+
+## ToDo
+* Faire que whereami prenne en option une Ip ou -me en passant par icanhazip
+
+Ex: `~$ whereami 87.XX.XX.XX.X` 
+
+`~$ whereami -me`
+
+* Afficher la localisation (ex: Roubaix, Nord, France) dans le label de la carte
+
+
