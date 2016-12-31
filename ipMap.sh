@@ -25,10 +25,10 @@ lon="$(curl ipinfo.io/87.231.6.105 | grep "loc" | cut -d, -f2 | awk '{ print $1}
 lat="$(curl ipinfo.io/87.231.6.105 | grep "loc" | cut -d, -f1 | awk '{ print $2}')"
 
 # On supprime les 3 dernieres et on ajoute les 3 lignes contenant les nouvelles variables
-sed -i '10,17 d' examples/map.js
-echo -e "map.addMarker({\"lon\" : \""${lon}", \"lat\" : "${lat}"\", color: \"red\", char: \"X\" })\n\t}\n\telse {\n\tmap.clearMarkers()\n\t}\n\tmarker =! marker\n\tscreen.render()\n}, 1000)" >> examples/map.js
+sed -i '10,17 d' $HOME/ipMap/examples/map.js
+echo -e "map.addMarker({\"lon\" : \""${lon}", \"lat\" : "${lat}"\", color: \"red\", char: \"X\" })\n\t}\n\telse {\n\tmap.clearMarkers()\n\t}\n\tmarker =! marker\n\tscreen.render()\n}, 1000)" >> $HOME/ipMap/examples/map.js
 
 # On print la carte dans le terminal
-nodejs examples/map.js
+nodejs $HOME/ipMap/examples/map.js
 
 
